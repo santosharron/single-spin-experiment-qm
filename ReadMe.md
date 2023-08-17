@@ -2,6 +2,9 @@
 
 ![Experiment 3](https://i.imgur.com/5xcIBGN.png)
 
+> **Note**
+> Due to time constraints, I prioritized working on the backend of the code, specifically focusing on various sections of quantum mechanics. My main goal was to implement the necessary formulas and techniques required to run the experiment smoothly, without encountering any errors.
+
 [Visit Site](https://64de443611c6cf1ae6b9d29e--effervescent-wisp-c3552f.netlify.app/)
 
 ## The Anatomy of a Single-Spin Experiment
