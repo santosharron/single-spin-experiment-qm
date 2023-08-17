@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://unpkg.com/three@0.137.5/build/three.js"></script>
+<!--script src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/jsm/controls/TrackballControls.js"></script-->
+<!--script src="manim_js/Manim.js/lib/p5/p5.js"></script-->
+<script src="manim_js/Manim.js/lib/p5/p5.min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.dom.min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.pre-min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.sound.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script-->
+<!--script src="manim_js/Manim.js/lib/katex/katex.min.js"></script>
+<script src="manim_js/Manim.js/Manim.js"></script>
+<script src="viz2.js"></script>
+<!--script src="manim_js/Manim.js/Linear Regression/chapter_3.js"></script>
+<script src="manim_js/Manim.js/Linear Regression/part2_utils.js"></script-->
+<script src="qbit_single.js"></script>
+<script src="view3_startup.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="form_hist_container_div_v3" class="form_hist_container">
+        <h1> Experiment 3</h1>
+<form class="form_border" action="" onSubmit="return false;">
+    <span id="alpha_label">Angle from X-axis towards Y-axis (degrees)</span>
+    <input type="number" id="alpha_text" class="number_box" value="45"/><br/>
+    <span id="beta_label">Angle from Y-axis towards Z-axis (degrees)</span>
+    <input type="number" id="beta_text" class="number_box" value="45"/><br/>
+    <span id="dt_label">Simulation time step (seconds, default = 0.05) </span>
+    <input type="number" id="dt_text" class="number_box" value="0.05" step="any"/><br/>
+
+    <button onclick="set_spin_direction_v3()">Set Spin Direction</button>
+    <button onclick="reset_direction_v3()">Reset Direction</button><br/>
+    <button id="run_evolution_button" onclick="run_hamilton()">Run Evolution</button>
+    <button onclick="stop_hamilton()">Stop Evolution</button><br/>
+
+    <div id="large_ts_warning_div">Simulation time steps bigger than 0.1s may produce unstable results.</div>
+</form>
+
+<div id="result_div">
+    <div id="container_div">
+        <div id="result_container">
+    <div id="result"></div>
+    <div id="measure_vec_div" style="display:none">Measuring along direction: <span id="measure_vec"></span></div>
+    <div id="measurement_div">Measurement: <span id="measurement"></span></div>
+    <div id="state_div">
+        Spin Alignment: <span id="state" style="display:none"></span> <span id="waiting">waiting for measurement</span> <span id="along">along the direction of measurement</span><span id="opposite">opposite to the direction of measurement</span> 
+    </div>
+    <div id="hamilton_exp">
+        <div id="sigma_z_exp"></div>
+        <div id="sigma_z_th"></div>
+        <div id="sigma_x_exp">
+            x component of spin  = <span id="sigma_x_exp_value"></span>
+        </div>
+        <div id="sigma_y_exp">
+            y component of spin = <span id="sigma_y_exp_value"></span>
+        </div>
+        <div id="sigma_x2_plus_y2_exp">
+            radius (experimental) = <span id="sigma_x2_plus_y2_exp_value"></span>
+        </div>
+        <div id="sigma_x2_plus_y2_th">
+            radius (theoretical) = <span id="sigma_x2_plus_y2_th_value"></span>
+        </div>
+        <div id="r_unit_div">
+            unit radius = <span id="unit_r"></span>
+        </div>
+    </div>
+    </div>
+
+    <div id="vis_container">
+        <div id="g1_vis"></div>
+        <div id="g2_vis"></div>
+    </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+<br/>
+<div id="experiment_form">
+
+
+
+</div>
+</div>
+
+<!--div id="hamilton_exp">
+    <div id="sigma_z_exp"></div>
+    <div id="sigma_z_th"></div>
+    <div id="sigma_x_exp"></div>
+    <div id="sigma_y_exp"></div>
+    <div id="sigma_x2_plus_y2_exp"></div>
+    <div id="sigma_x2_plus_y2_th"></div>
+</div-->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script stc="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+<script src="qbit_single.js"></script>
+
+<form action="" onSubmit="return false;">
+<input type="text" id="alpha_text"/>
+<input type="text" id="beta_text"/>
+<button onclick="calculate_result()">Calculate</button>
+</form>
+
+<div id="result" >
+</div>
+<br/>
+<div id="experiment_form">
+<input type="text" id="n_times_text"/>
+<button onclick="start_experiment()">
+Run Experiment
+</button>
+<div id="hist_vis"></div>
+<div id="expected_value">
+</div>
+</div>

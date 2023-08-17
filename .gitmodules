@@ -1,0 +1,4 @@
+[submodule "manim_js/Manim.js"]
+	path = manim_js/Manim.js
+	url = git@github.com:pcb-astro/Manim.js.git
+	branch = qm

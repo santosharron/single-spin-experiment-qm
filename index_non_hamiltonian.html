@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://unpkg.com/three@0.137.5/build/three.js"></script>
+<script src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/jsm/controls/TrackballControls.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.dom.min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.pre-min.js"></script>
+<script src="manim_js/Manim.js/lib/p5/p5.sound.min.js"></script>
+<!--script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script-->
+<script src="manim_js/Manim.js/lib/katex/katex.min.js"></script>
+<script src="manim_js/Manim.js/Manim.js"></script>
+<script src="viz2.js"></script>
+<!--script src="manim_js/Manim.js/Linear Regression/chapter_3.js"></script-->
+<!--script src="manim_js/Manim.js/Linear Regression/part2_utils.js"></script-->
+<script src="qbit_single.js"></script>
+<script src="qbit_hamilton.js"></script>
+</head>
+
+<body>
+<form action="" onSubmit="return false;">
+    <span id="alpha_label">Angle from X-axis towards Y-axis (degrees)</span>
+    <input type="text" id="alpha_text" value="0"/>
+    <span id="beta_label">Angle from Y-axis towards Z-axis (degrees)</span>
+    <input type="text" id="beta_text" value="0"/>
+    <button onclick="align_measurement()">Set Measurement Direction</button>
+    <button onclick="run_evolution()">Run Evolution</button>
+    <button onclick="reset_state()">Reset</button>
+</form>
+
+<div id="result_div">
+    <div id="result"></div>
+    <div id="measure_vec_div">Measuring along direction: <span id="measure_vec"></span></div>
+    <div id="measurement_div">Measurement: <span id="measurement"></span></div>
+    <div id="state_div">
+        The spin is aligned in direction: <span id="state"></span> <span id="along">(i.e. along the direction of measurement)</span><span id="opposite">(i.e. opposite to the direction of measurement)</span> 
+    </div>
+</div>
+
+<br/>
+<div id="experiment_form">
+<input type="text" id="n_times_text"/>
+<button onclick="start_experiment()">
+Run Experiment
+</button>
+<div id="hist_vis"></div>
+<div id="expected_value">
+</div>
+</div>
+</body>
+</html>
