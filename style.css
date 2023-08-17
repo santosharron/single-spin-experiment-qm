@@ -1,6 +1,23 @@
 body {
     font-size: 18px;
+    font-family: 'SF Pro Display Regular';
 }
+
+
+.button {
+    margin-top: 20px;
+    margin-left: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 15px 70px;
+    background: #fff;
+    font-size: 15px;
+    border-width: 3.5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+  }
+
 
 .number_box {
     width: 50px;
@@ -10,7 +27,7 @@ body {
     padding-bottom: 5px;
     padding-top: 5px;
     border-left-width: 4px;
-    border-bottom-width: 4px;*/
+    border-bottom-width: 4px; */
     margin-left: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -23,11 +40,12 @@ body {
 }
 
 .form_border {
-    border-width: 2px;
+    border-width: 3.5px;
     border-color: black;
     border-style: solid;
     border-radius: 20px;
-    padding: 14px;
+    justify-content: space-between;
+    padding: 54px;
     width: max-content;
 }
 

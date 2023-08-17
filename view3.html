@@ -12,8 +12,8 @@
 <script src="manim_js/Manim.js/lib/p5/p5.dom.min.js"></script>
 <script src="manim_js/Manim.js/lib/p5/p5.pre-min.js"></script>
 <script src="manim_js/Manim.js/lib/p5/p5.sound.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script-->
-<!--script src="manim_js/Manim.js/lib/katex/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+<!-- <script src="manim_js/Manim.js/lib/katex/katex.min.js"></script> -->
 <script src="manim_js/Manim.js/Manim.js"></script>
 <script src="viz2.js"></script>
 <!--script src="manim_js/Manim.js/Linear Regression/chapter_3.js"></script>
@@ -34,10 +34,10 @@
     <span id="dt_label">Simulation time step (seconds, default = 0.05) </span>
     <input type="number" id="dt_text" class="number_box" value="0.05" step="any"/><br/>
 
-    <button onclick="set_spin_direction_v3()">Set Spin Direction</button>
-    <button onclick="reset_direction_v3()">Reset Direction</button><br/>
-    <button id="run_evolution_button" onclick="run_hamilton()">Run Evolution</button>
-    <button onclick="stop_hamilton()">Stop Evolution</button><br/>
+    <button class="button" onclick="set_spin_direction_v3()">Set Spin Direction</button>
+    <button class="button" onclick="reset_direction_v3()">Reset Direction</button><br/>
+    <button class="button" id="run_evolution_button" onclick="run_hamilton()">Run Evolution</button>
+    <button class="button" onclick="stop_hamilton()">Stop Evolution</button><br/>
 
     <div id="large_ts_warning_div">Simulation time steps bigger than 0.1s may produce unstable results.</div>
 </form>
