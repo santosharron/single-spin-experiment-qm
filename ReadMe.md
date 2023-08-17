@@ -1,4 +1,4 @@
-# Single - Spin Experiment from Quantum Mechanics
+# Single - Spin Experiment in Quantum Mechanics
 
 ![Experiment 3](https://i.imgur.com/5xcIBGN.png)
 
