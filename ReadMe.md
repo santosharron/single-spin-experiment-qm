@@ -1,6 +1,6 @@
 # Single - Spin Experiment from Quantum Mechanics
 
-![Experiment 3](./assets/1.png)
+![Experiment 3](/assets/1.png)
 
 ## The Anatomy of a Single-Spin Experiment
 The experimental setup he describes involves a single spin which can be in either an “up” or a “down” state. We also have a detector — a measuring device that gives a measurement of “+1” if it detected the spin in the up state, or “-1” if it detected the spin in the down state.
